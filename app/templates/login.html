@@ -1,0 +1,24 @@
+{% extends 'layout.htm' %}
+
+{% block content %}
+    <h1>Log In</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          {{ form.email.label }}
+          {{ form.email(class='form-control', type='email') }}
+        </div>
+        <div class="form-group">
+          {{ form.password.label }}
+          {{ form.password(class='form-control') }}
+        </div>
+        <div class="form-group">
+          {{ form.remember_me(class='form-check-input') }}
+          {{ form.remember_me.label }}
+        </div>
+        <div class="form-group">
+          {{ form.submit(class='btn btn-dark') }}
+        </div>
+    </form>
+    
+{% endblock %}
